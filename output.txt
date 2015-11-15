@@ -1,0 +1,24 @@
+
+Feature: Search Google for a Celebrity             # \features\searchGoogle.feature:1
+
+  Scenario: Search google for Kobe Bryant          # \features\searchGoogle.feature:2
+    Given I go to "http://www.google.com"          # \features\test.py:10
+    Given I go to "http://www.google.com"          # \features\test.py:10
+    And I fill in the textfield with "Kobe Bryant" # \features\test.py:23
+    And I fill in the textfield with "Kobe Bryant" # \features\test.py:23
+    And I press "btnG"                             # \features\test.py:16
+    And I press "btnG"                             # \features\test.py:16
+    Then I should see "kobebryant.com/"            # \features\searchGoogle.feature:6
+
+1 feature (0 passed)
+1 scenario (0 passed)
+4 steps (1 undefined, 3 passed)
+
+You can implement step definitions for undefined steps with these snippets:
+
+# -*- coding: utf-8 -*-
+from lettuce import step
+
+@step(u'Then I should see "([^"]*)"')
+def then_i_should_see_group1(step, group1):
+    assert False, 'This step must be implemented'

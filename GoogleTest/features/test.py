@@ -27,7 +27,7 @@ def fill_in_textfield(step, entry):
         textfield.send_keys(entry)
 
 
-@step('I should see the follwing website"(.*?)"$')
+@step('I should see "(.*?)"$')
 def should_see(step, text):
     with AssertContextManager(step):
         time.sleep(2)
